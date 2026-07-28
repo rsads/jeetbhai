@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>JEET BHAI | Cricket Updates</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    min-height:100vh;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #18334d 0%,
+        #07111f 45%,
+        #010409 100%
+    );
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    width:100%;
+
+    max-width:520px;
+
+    min-height:100vh;
+
+    padding:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card{
+
+    width:100%;
+
+    max-width:500px;
+
+    position:relative;
+
+    isolation:isolate;
+
+    overflow:hidden;
+
+    padding:
+    12px
+    12px
+    18px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    rgba(3,10,18,.92);
+
+    border:
+    1px solid
+    rgba(0,200,255,.45);
+
+    box-shadow:
+
+    0 0 20px
+    rgba(0,170,255,.12),
+
+    0 0 60px
+    rgba(0,120,255,.08);
+
+}
+
+
+/* =========================
+   VAIBHAV BACKGROUND IMAGE
+========================= */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(2,8,16,.55),
+
+        rgba(2,8,16,.86)
+
+    ),
+
+    url("vaibhav.jpg")
+
+    center top /
+
+    cover
+
+    no-repeat;
+
+    opacity:.48;
+
+    z-index:-2;
+
+    animation:
+
+    vaibhavZoom
+
+    14s
+
+    ease-in-out
+
+    infinite
+
+    alternate;
+
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle at 50% 25%,
+
+        transparent 0%,
+
+        rgba(2,8,16,.18) 35%,
+
+        rgba(2,8,16,.78) 75%,
+
+        rgba(1,4,9,.95) 100%
+
+    );
+
+    z-index:-1;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+@keyframes vaibhavZoom{
+
+    from{
+
+        transform:
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        scale(1.08);
+
+    }
+
+}
+
+
+/* =========================
+   NEWS TICKER
+========================= */
+
+.news-box{
+
+    width:100%;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(2,25,42,.95),
+
+        rgba(7,60,88,.95),
+
+        rgba(2,25,42,.95)
+
+    );
+
+    border-top:
+    1px solid
+    #00c8ff;
+
+    border-bottom:
+    1px solid
+    #00c8ff;
+
+    padding:
+    7px
+    0;
+
+    margin-bottom:
+    12px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+/* =========================
+   NEWS MOVING TEXT
+========================= */
+
+.news-track{
+
+    display:inline-block;
+
+    padding-left:100%;
+
+    animation:
+
+    scrollNews
+
+    28s
+
+    linear
+
+    infinite;
+
+    color:#eafaff;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.news-track span{
+
+    margin-right:80px;
+
+}
+
+
+/* =========================
+   TICKER ANIMATION
+========================= */
+
+@keyframes scrollNews{
+
+    0%{
+
+        transform:
+        translateX(0);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(-100%);
+
+    }
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-box{
+
+    width:175px;
+
+    height:175px;
+
+    margin:
+    5px
+    auto
+    8px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:
+    3px solid
+    #00c8ff;
+
+    background:#07111b;
+
+    box-shadow:
+
+    0 0 15px
+    #00aaff,
+
+    0 0 40px
+    rgba(0,170,255,.35);
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+
+.logo-box img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* =========================
+   UPLOAD AREA
+========================= */
+
+.upload-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:6px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+.upload-label{
+
+    display:inline-block;
+
+    padding:
+    6px
+    12px;
+
+    border-radius:20px;
+
+    background:
+    rgba(7,25,39,.9);
+
+    border:
+    1px solid
+    #168ec0;
+
+    color:#72dfff;
+
+    font-size:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.upload-label:hover{
+
+    background:#0d344b;
+
+    transform:
+    translateY(-2px);
+
+}
+
+
+.upload-input{
+
+    display:none;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1{
+
+    margin-top:
+    7px;
+
+    font-size:
+    37px;
+
+    letter-spacing:
+    3px;
+
+    font-weight:
+    900;
+
+    color:#ffffff;
+
+    position:relative;
+
+    z-index:4;
+
+    text-shadow:
+
+    0 0 8px
+    #00c8ff,
+
+    0 0 20px
+    #008cff,
+
+    0 0 35px
+    rgba(0,200,255,.5);
+
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+
+    margin-top:
+    3px;
+
+    font-size:
+    12px;
+
+    color:
+    #55d9ff;
+
+    letter-spacing:
+    1px;
+
+    font-weight:
+    bold;
+
+    position:relative;
+
+    z-index:4;
+
+}
+
+
+/* =========================
+   LINE
+========================= */
+
+.line{
+
+    width:
+    90px;
+
+    height:
+    2px;
+
+    margin:
+    10px
+    auto;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #00c8ff,
+
+        transparent
+
+    );
+
+    position:relative;
+
+    z-index:4;
+
+}
+
+
+/* =========================
+   VAIBHAV CONTENT
+========================= */
+
+.vaibhav-box{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(0,150,220,.14),
+
+        rgba(255,193,7,.08)
+
+    );
+
+    border:
+    1px solid
+    rgba(0,190,255,.35);
+
+    border-radius:
+    16px;
+
+    padding:
+    13px
+    10px;
+
+    margin:
+    8px
+    0
+    12px;
+
+    position:relative;
+
+    z-index:4;
+
+    backdrop-filter:
+    blur(4px);
+
+}
+
+
+.vaibhav-box h2{
+
+    font-size:
+    19px;
+
+    color:
+    #ffe066;
+
+    margin-bottom:
+    5px;
+
+    text-shadow:
+
+    0 0 10px
+    rgba(255,210,50,.45);
+
+}
+
+
+.vaibhav-box h3{
+
+    font-size:
+    13px;
+
+    color:
+    #62ddff;
+
+    margin-bottom:
+    7px;
+
+}
+
+
+.vaibhav-box p{
+
+    font-size:
+    11px;
+
+    line-height:
+    1.55;
+
+    color:
+    #e0edf2;
+
+}
+
+
+.vaibhav-box b{
+
+    color:
+    #ffffff;
+
+}
+
+
+/* =========================
+   HIGHLIGHT BOXES
+========================= */
+
+.highlights{
+
+    display:flex;
+
+    gap:
+    7px;
+
+    margin:
+    10px
+    0
+    12px;
+
+    position:relative;
+
+    z-index:4;
+
+}
+
+
+.highlight{
+
+    flex:1;
+
+    padding:
+    9px
+    4px;
+
+    border-radius:
+    10px;
+
+    background:
+    rgba(0,20,35,.72);
+
+    border:
+    1px solid
+    rgba(0,190,255,.25);
+
+    backdrop-filter:
+    blur(3px);
+
+}
+
+
+.highlight b{
+
+    display:block;
+
+    font-size:
+    13px;
+
+    color:
+    #ffe066;
+
+}
+
+
+.highlight span{
+
+    font-size:
+    9px;
+
+    color:
+    #b7cbd4;
+
+}
+
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.telegram-btn{
+
+    display:block;
+
+    width:100%;
+
+    padding:
+    16px;
+
+    border-radius:
+    50px;
+
+    text-decoration:none;
+
+    color:
+    #00131c;
+
+    font-size:
+    16px;
+
+    font-weight:
+    900;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #00e5ff,
+
+        #00a8ff,
+
+        #55f3ff
+
+    );
+
+    box-shadow:
+
+    0 5px 25px
+    rgba(0,190,255,.4);
+
+    animation:
+
+    pulseButton
+
+    2s
+
+    infinite;
+
+    position:relative;
+
+    z-index:5;
+
+    transition:
+    .3s;
+
+}
+
+
+.telegram-btn:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.01);
+
+}
+
+
+@keyframes pulseButton{
+
+    0%,
+    100%{
+
+        box-shadow:
+
+        0 5px 20px
+        rgba(0,190,255,.3);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 5px 35px
+        rgba(0,190,255,.8);
+
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:
+    10px;
+
+    font-size:
+    9px;
+
+    color:
+    #71838d;
+
+    position:relative;
+
+    z-index:4;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .container{
+
+        padding:
+        6px;
+
+    }
+
+
+    .card{
+
+        padding:
+        9px
+        8px
+        15px;
+
+        border-radius:
+        21px;
+
+    }
+
+
+    .logo-box{
+
+        width:
+        145px;
+
+        height:
+        145px;
+
+    }
+
+
+    h1{
+
+        font-size:
+        30px;
+
+        letter-spacing:
+        2px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:
+        10px;
+
+    }
+
+
+    .vaibhav-box{
+
+        padding:
+        11px
+        8px;
+
+    }
+
+
+    .vaibhav-box h2{
+
+        font-size:
+        17px;
+
+    }
+
+
+    .vaibhav-box h3{
+
+        font-size:
+        11px;
+
+    }
+
+
+    .vaibhav-box p{
+
+        font-size:
+        10px;
+
+    }
+
+
+    .highlights{
+
+        gap:
+        5px;
+
+    }
+
+
+    .highlight{
+
+        padding:
+        8px
+        2px;
+
+    }
+
+
+    .highlight b{
+
+        font-size:
+        11px;
+
+    }
+
+
+    .highlight span{
+
+        font-size:
+        8px;
+
+    }
+
+
+    .telegram-btn{
+
+        padding:
+        14px;
+
+        font-size:
+        15px;
+
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media(max-width:350px){
+
+    .logo-box{
+
+        width:
+        125px;
+
+        height:
+        125px;
+
+    }
+
+
+    h1{
+
+        font-size:
+        27px;
+
+    }
+
+
+    .vaibhav-box h2{
+
+        font-size:
+        15px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<!-- =========================
+     TOP NEWS TICKER
+========================= -->
+
+<div class="news-box">
+
+<div class="news-track">
+
+<span>
+🏏 BREAKING CRICKET NEWS
+</span>
+
+<span>
+🔥 VAIBHAV SOORYAVANSHI IN THE SPOTLIGHT
+</span>
+
+<span>
+🇮🇳 INDIA CRICKET LATEST UPDATES
+</span>
+
+<span>
+🏆 MATCH NEWS • TEAM NEWS • PLAYING XI
+</span>
+
+<span>
+⚡ CRICKET MATCH UPDATES & HIGHLIGHTS
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     LOGO
+========================= -->
+
+<div class="logo-box">
+
+<img
+
+id="logoPreview"
+
+src="logo.jpg"
+
+alt="JEET BHAI Logo"
+
+>
+
+</div>
+
+
+
+<!-- =========================
+     UPLOAD BUTTONS
+========================= -->
+
+<div class="upload-area">
+
+
+<label
+
+for="logoInput"
+
+class="upload-label"
+
+>
+
+📷 Upload Logo
+
+</label>
+
+
+<input
+
+type="file"
+
+id="logoInput"
+
+class="upload-input"
+
+accept="image/*"
+
+>
+
+
+
+<label
+
+for="vaibhavInput"
+
+class="upload-label"
+
+>
+
+🏏 Upload Background
+
+</label>
+
+
+<input
+
+type="file"
+
+id="vaibhavInput"
+
+class="upload-input"
+
+accept="image/*"
+
+>
+
+
+</div>
+
+
+
+<!-- =========================
+     BRAND
+========================= -->
+
+<h1>
+
+JEET BHAI
+
+</h1>
+
+
+<div class="subtitle">
+
+🏏 CRICKET NEWS & MATCH UPDATES 🏏
+
+</div>
+
+
+<div class="line"></div>
+
+
+
+<!-- =========================
+     VAIBHAV SECTION
+========================= -->
+
+<div class="vaibhav-box">
+
+
+<h2>
+
+⭐ VAIBHAV SOORYAVANSHI ⭐
+
+</h2>
+
+
+<h3>
+
+INDIA'S YOUNG CRICKET SENSATION
+
+</h3>
+
+
+<p>
+
+Stay connected with the latest cricket news,
+match updates, team information and exciting
+stories surrounding young Indian cricket star
+
+<b>
+Vaibhav Sooryavanshi
+</b>
+
+and the world of cricket.
+
+</p>
+
+
+</div>
+
+
+
+<!-- =========================
+     HIGHLIGHTS
+========================= -->
+
+<div class="highlights">
+
+
+<div class="highlight">
+
+<b>
+
+🏏 MATCH
+
+</b>
+
+<span>
+
+Latest Updates
+
+</span>
+
+</div>
+
+
+<div class="highlight">
+
+<b>
+
+🔥 NEWS
+
+</b>
+
+<span>
+
+Cricket News
+
+</span>
+
+</div>
+
+
+<div class="highlight">
+
+<b>
+
+🇮🇳 INDIA
+
+</b>
+
+<span>
+
+Team Updates
+
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     BOTTOM NEWS
+========================= -->
+
+<div class="news-box">
+
+<div class="news-track">
+
+
+<span>
+
+⚡ VAIBHAV SOORYAVANSHI CRICKET UPDATES
+
+</span>
+
+
+<span>
+
+🏏 LATEST MATCH NEWS & HIGHLIGHTS
+
+</span>
+
+
+<span>
+
+🇮🇳 TEAM INDIA CRICKET UPDATES
+
+</span>
+
+
+<span>
+
+🔥 FOLLOW JEET BHAI FOR MORE CRICKET NEWS
+
+</span>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     TELEGRAM BUTTON
+========================= -->
+
+<a
+
+class="telegram-btn"
+
+href="https://t.me/+SYwWv5L0IY85NzI1"
+
+target="_blank"
+
+rel="noopener"
+
+>
+
+🚀 JOIN JEET BHAI TELEGRAM
+
+</a>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<div class="footer">
+
+© 2026 JEET BHAI • Cricket News & Updates
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   LOGO UPLOAD
+========================= */
+
+const logoInput =
+document.getElementById(
+    "logoInput"
+);
+
+const logoPreview =
+document.getElementById(
+    "logoPreview"
+);
+
+
+logoInput.addEventListener(
+
+    "change",
+
+    function(event){
+
+        const file =
+        event.target.files[0];
+
+        if(file){
+
+            const reader =
+            new FileReader();
+
+
+            reader.onload =
+            function(e){
+
+                logoPreview.src =
+                e.target.result;
+
+            };
+
+
+            reader.readAsDataURL(file);
+
+        }
+
+    }
+
+);
+
+
+
+/* =========================
+   VAIBHAV BACKGROUND UPLOAD
+========================= */
+
+const vaibhavInput =
+document.getElementById(
+    "vaibhavInput"
+);
+
+
+vaibhavInput.addEventListener(
+
+    "change",
+
+    function(event){
+
+        const file =
+        event.target.files[0];
+
+
+        if(file){
+
+            const imageURL =
+            URL.createObjectURL(file);
+
+
+            const style =
+            document.createElement(
+                "style"
+            );
+
+
+            style.innerHTML = `
+
+            .card::before{
+
+                background:
+
+                linear-gradient(
+
+                    rgba(2,8,16,.55),
+
+                    rgba(2,8,16,.86)
+
+                ),
+
+                url("${imageURL}")
+
+                center top /
+
+                cover
+
+                no-repeat;
+
+            }
+
+            `;
+
+
+            document.head.appendChild(
+                style
+            );
+
+        }
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
