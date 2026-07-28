@@ -9,6 +9,7 @@ content="width=device-width, initial-scale=1.0">
 
 <title>JEET BHAI | Cricket Updates</title>
 
+
 <style>
 
 /* =========================
@@ -38,9 +39,9 @@ body{
     background:
     radial-gradient(
         circle at top,
-        #18334d 0%,
-        #07111f 45%,
-        #010409 100%
+        #26113d 0%,
+        #0b0615 45%,
+        #020205 100%
     );
 
     color:#ffffff;
@@ -96,34 +97,34 @@ body{
     overflow:hidden;
 
     padding:
-    12px
-    12px
+    10px
+    11px
     18px;
 
     text-align:center;
 
-    border-radius:25px;
+    border-radius:27px;
 
     background:
-    rgba(3,10,18,.92);
+    rgba(4,3,10,.91);
 
     border:
     1px solid
-    rgba(0,200,255,.45);
+    rgba(255,0,153,.55);
 
     box-shadow:
 
     0 0 20px
-    rgba(0,170,255,.12),
+    rgba(255,0,153,.18),
 
     0 0 60px
-    rgba(0,120,255,.08);
+    rgba(130,0,255,.12);
 
 }
 
 
 /* =========================
-   VAIBHAV BACKGROUND IMAGE
+   VAIBHAV BACKGROUND
 ========================= */
 
 .card::before{
@@ -138,9 +139,9 @@ body{
 
     linear-gradient(
 
-        rgba(2,8,16,.55),
+        rgba(7,2,15,.48),
 
-        rgba(2,8,16,.86)
+        rgba(3,2,10,.88)
 
     ),
 
@@ -152,9 +153,9 @@ body{
 
     no-repeat;
 
-    opacity:.48;
+    opacity:.52;
 
-    z-index:-2;
+    z-index:-3;
 
     animation:
 
@@ -172,7 +173,7 @@ body{
 
 
 /* =========================
-   DARK OVERLAY
+   COLOR OVERLAY
 ========================= */
 
 .card::after{
@@ -185,19 +186,66 @@ body{
 
     background:
 
-    radial-gradient(
+    linear-gradient(
 
-        circle at 50% 25%,
+        135deg,
 
-        transparent 0%,
+        rgba(255,0,153,.08),
 
-        rgba(2,8,16,.18) 35%,
+        transparent 35%,
 
-        rgba(2,8,16,.78) 75%,
+        rgba(120,0,255,.12),
 
-        rgba(1,4,9,.95) 100%
+        transparent 70%
 
     );
+
+    z-index:-2;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================
+   BACKGROUND ZOOM
+========================= */
+
+@keyframes vaibhavZoom{
+
+    0%{
+
+        transform:
+        scale(1);
+
+    }
+
+    100%{
+
+        transform:
+        scale(1.08);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING LIGHTS
+========================= */
+
+.card .light1,
+.card .light2,
+.card .light3{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:
+    blur(25px);
+
+    opacity:.45;
 
     z-index:-1;
 
@@ -206,23 +254,120 @@ body{
 }
 
 
-/* =========================
-   BACKGROUND ANIMATION
-========================= */
+.card .light1{
 
-@keyframes vaibhavZoom{
+    width:100px;
 
-    from{
+    height:100px;
+
+    background:#ff0099;
+
+    top:15%;
+
+    left:-50px;
+
+    animation:
+    floatLight1
+    7s
+    ease-in-out
+    infinite;
+
+}
+
+
+.card .light2{
+
+    width:120px;
+
+    height:120px;
+
+    background:#7300ff;
+
+    bottom:10%;
+
+    right:-60px;
+
+    animation:
+    floatLight2
+    9s
+    ease-in-out
+    infinite;
+
+}
+
+
+.card .light3{
+
+    width:70px;
+
+    height:70px;
+
+    background:#00eaff;
+
+    top:50%;
+
+    right:20%;
+
+    animation:
+    floatLight3
+    6s
+    ease-in-out
+    infinite;
+
+}
+
+
+@keyframes floatLight1{
+
+    0%,100%{
 
         transform:
-        scale(1);
+        translate(0,0);
 
     }
 
-    to{
+    50%{
 
         transform:
-        scale(1.08);
+        translate(50px,30px);
+
+    }
+
+}
+
+
+@keyframes floatLight2{
+
+    0%,100%{
+
+        transform:
+        translate(0,0);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-40px,-40px);
+
+    }
+
+}
+
+
+@keyframes floatLight3{
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-40px);
 
     }
 
@@ -247,38 +392,43 @@ body{
 
         90deg,
 
-        rgba(2,25,42,.95),
+        rgba(38,0,45,.95),
 
-        rgba(7,60,88,.95),
+        rgba(100,0,95,.9),
 
-        rgba(2,25,42,.95)
+        rgba(38,0,45,.95)
 
     );
 
     border-top:
     1px solid
-    #00c8ff;
+    #ff00a8;
 
     border-bottom:
     1px solid
-    #00c8ff;
+    #ff00a8;
 
     padding:
     7px
     0;
 
     margin-bottom:
-    12px;
+    11px;
 
     position:relative;
 
     z-index:5;
 
+    box-shadow:
+
+    0 0 15px
+    rgba(255,0,153,.18);
+
 }
 
 
 /* =========================
-   NEWS MOVING TEXT
+   NEWS TEXT
 ========================= */
 
 .news-track{
@@ -291,13 +441,13 @@ body{
 
     scrollNews
 
-    28s
+    27s
 
     linear
 
     infinite;
 
-    color:#eafaff;
+    color:#fff;
 
     font-size:11px;
 
@@ -314,7 +464,7 @@ body{
 
 
 /* =========================
-   TICKER ANIMATION
+   NEWS ANIMATION
 ========================= */
 
 @keyframes scrollNews{
@@ -349,7 +499,7 @@ body{
     margin:
     5px
     auto
-    8px;
+    7px;
 
     border-radius:50%;
 
@@ -357,21 +507,34 @@ body{
 
     border:
     3px solid
-    #00c8ff;
+    #ff00b7;
 
-    background:#07111b;
+    background:#08030d;
 
     box-shadow:
 
-    0 0 15px
-    #00aaff,
+    0 0 10px
+    #ff00b7,
 
-    0 0 40px
-    rgba(0,170,255,.35);
+    0 0 25px
+    #9d00ff,
+
+    0 0 55px
+    rgba(255,0,153,.35);
 
     position:relative;
 
-    z-index:3;
+    z-index:4;
+
+    animation:
+
+    logoGlow
+
+    3s
+
+    ease-in-out
+
+    infinite;
 
 }
 
@@ -388,71 +551,37 @@ body{
 
 
 /* =========================
-   UPLOAD AREA
+   LOGO GLOW
 ========================= */
 
-.upload-area{
+@keyframes logoGlow{
 
-    display:flex;
+    0%,100%{
 
-    justify-content:center;
+        box-shadow:
 
-    align-items:center;
+        0 0 10px
+        #ff00b7,
 
-    gap:7px;
+        0 0 25px
+        #9d00ff;
 
-    flex-wrap:wrap;
+    }
 
-    margin-bottom:6px;
+    50%{
 
-    position:relative;
+        box-shadow:
 
-    z-index:5;
+        0 0 20px
+        #ff00b7,
 
-}
+        0 0 45px
+        #9d00ff,
 
+        0 0 70px
+        rgba(255,0,153,.5);
 
-.upload-label{
-
-    display:inline-block;
-
-    padding:
-    6px
-    12px;
-
-    border-radius:20px;
-
-    background:
-    rgba(7,25,39,.9);
-
-    border:
-    1px solid
-    #168ec0;
-
-    color:#72dfff;
-
-    font-size:10px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-.upload-label:hover{
-
-    background:#0d344b;
-
-    transform:
-    translateY(-2px);
-
-}
-
-
-.upload-input{
-
-    display:none;
+    }
 
 }
 
@@ -464,13 +593,13 @@ body{
 h1{
 
     margin-top:
-    7px;
+    5px;
 
     font-size:
     37px;
 
     letter-spacing:
-    3px;
+    4px;
 
     font-weight:
     900;
@@ -483,14 +612,60 @@ h1{
 
     text-shadow:
 
-    0 0 8px
-    #00c8ff,
+    0 0 5px
+    #ff00b7,
 
-    0 0 20px
-    #008cff,
+    0 0 15px
+    #ff00b7,
 
-    0 0 35px
-    rgba(0,200,255,.5);
+    0 0 30px
+    #8c00ff;
+
+    animation:
+
+    titleGlow
+
+    2.5s
+
+    ease-in-out
+
+    infinite;
+
+}
+
+
+/* =========================
+   TITLE ANIMATION
+========================= */
+
+@keyframes titleGlow{
+
+    0%,100%{
+
+        text-shadow:
+
+        0 0 5px
+        #ff00b7,
+
+        0 0 15px
+        #ff00b7;
+
+    }
+
+    50%{
+
+        text-shadow:
+
+        0 0 10px
+        #ff00b7,
+
+        0 0 30px
+        #8c00ff,
+
+        0 0 45px
+        #ff00b7;
+
+    }
 
 }
 
@@ -508,7 +683,7 @@ h1{
     12px;
 
     color:
-    #55d9ff;
+    #ff8ddd;
 
     letter-spacing:
     1px;
@@ -530,7 +705,7 @@ h1{
 .line{
 
     width:
-    90px;
+    100px;
 
     height:
     2px;
@@ -547,11 +722,18 @@ h1{
 
         transparent,
 
-        #00c8ff,
+        #ff00b7,
+
+        #8c00ff,
 
         transparent
 
     );
+
+    box-shadow:
+
+    0 0 10px
+    #ff00b7;
 
     position:relative;
 
@@ -572,34 +754,42 @@ h1{
 
         135deg,
 
-        rgba(0,150,220,.14),
+        rgba(255,0,153,.12),
 
-        rgba(255,193,7,.08)
+        rgba(111,0,255,.14)
 
     );
 
     border:
     1px solid
-    rgba(0,190,255,.35);
+    rgba(255,0,180,.35);
 
     border-radius:
     16px;
 
     padding:
-    13px
+    12px
     10px;
 
     margin:
-    8px
+    7px
     0
-    12px;
+    11px;
 
     position:relative;
 
     z-index:4;
 
     backdrop-filter:
-    blur(4px);
+    blur(5px);
+
+    box-shadow:
+
+    inset 0 0 20px
+    rgba(255,0,153,.04),
+
+    0 0 20px
+    rgba(130,0,255,.08);
 
 }
 
@@ -610,15 +800,15 @@ h1{
     19px;
 
     color:
-    #ffe066;
+    #ffe66d;
 
     margin-bottom:
     5px;
 
     text-shadow:
 
-    0 0 10px
-    rgba(255,210,50,.45);
+    0 0 8px
+    rgba(255,220,50,.7);
 
 }
 
@@ -626,13 +816,13 @@ h1{
 .vaibhav-box h3{
 
     font-size:
-    13px;
+    12px;
 
     color:
-    #62ddff;
+    #ff8ddd;
 
     margin-bottom:
-    7px;
+    6px;
 
 }
 
@@ -646,7 +836,7 @@ h1{
     1.55;
 
     color:
-    #e0edf2;
+    #f0eaf3;
 
 }
 
@@ -660,7 +850,7 @@ h1{
 
 
 /* =========================
-   HIGHLIGHT BOXES
+   HIGHLIGHTS
 ========================= */
 
 .highlights{
@@ -671,7 +861,7 @@ h1{
     7px;
 
     margin:
-    10px
+    9px
     0
     12px;
 
@@ -691,17 +881,36 @@ h1{
     4px;
 
     border-radius:
-    10px;
+    11px;
 
     background:
-    rgba(0,20,35,.72);
+    rgba(10,2,18,.72);
 
     border:
     1px solid
-    rgba(0,190,255,.25);
+    rgba(255,0,180,.25);
 
     backdrop-filter:
-    blur(3px);
+    blur(4px);
+
+    transition:
+    .3s;
+
+}
+
+
+.highlight:hover{
+
+    transform:
+    translateY(-3px);
+
+    border-color:
+    #ff00b7;
+
+    box-shadow:
+
+    0 0 15px
+    rgba(255,0,153,.25);
 
 }
 
@@ -711,10 +920,10 @@ h1{
     display:block;
 
     font-size:
-    13px;
+    12px;
 
     color:
-    #ffe066;
+    #ffe66d;
 
 }
 
@@ -725,7 +934,7 @@ h1{
     9px;
 
     color:
-    #b7cbd4;
+    #d5cbd9;
 
 }
 
@@ -741,52 +950,75 @@ h1{
     width:100%;
 
     padding:
-    16px;
+    16px
+    18px;
 
     border-radius:
     50px;
 
     text-decoration:none;
 
-    color:
-    #00131c;
+    color:#ffffff;
 
     font-size:
-    16px;
+    17px;
 
     font-weight:
     900;
+
+    letter-spacing:
+    .5px;
 
     background:
 
     linear-gradient(
 
-        135deg,
+        90deg,
 
-        #00e5ff,
+        #ff007f,
 
-        #00a8ff,
+        #8c00ff,
 
-        #55f3ff
+        #ff4d00,
+
+        #ff007f
 
     );
 
+    background-size:
+    300% 100%;
+
     box-shadow:
 
-    0 5px 25px
-    rgba(0,190,255,.4);
+    0 0 10px
+    rgba(255,0,128,.65),
 
-    animation:
-
-    pulseButton
-
-    2s
-
-    infinite;
+    0 0 25px
+    rgba(140,0,255,.45);
 
     position:relative;
 
     z-index:5;
+
+    overflow:hidden;
+
+    animation:
+
+    buttonGradient
+
+    4s
+
+    linear
+
+    infinite,
+
+    buttonPulse
+
+    2s
+
+    ease-in-out
+
+    infinite;
 
     transition:
     .3s;
@@ -794,24 +1026,117 @@ h1{
 }
 
 
-.telegram-btn:hover{
+/* =========================
+   BUTTON SHINE
+========================= */
+
+.telegram-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.5),
+
+        transparent
+
+    );
 
     transform:
-    translateY(-3px)
-    scale(1.01);
+    skewX(-20deg);
+
+    animation:
+
+    buttonShine
+
+    2.8s
+
+    infinite;
 
 }
 
 
-@keyframes pulseButton{
+/* =========================
+   BUTTON HOVER
+========================= */
 
-    0%,
+.telegram-btn:hover{
+
+    transform:
+    scale(1.03)
+    translateY(-2px);
+
+    box-shadow:
+
+    0 0 15px
+    #ff007f,
+
+    0 0 35px
+    #8c00ff,
+
+    0 0 55px
+    rgba(255,77,0,.6);
+
+}
+
+
+/* =========================
+   BUTTON ANIMATIONS
+========================= */
+
+@keyframes buttonGradient{
+
+    0%{
+
+        background-position:
+        0% 50%;
+
+    }
+
+    50%{
+
+        background-position:
+        100% 50%;
+
+    }
+
     100%{
+
+        background-position:
+        0% 50%;
+
+    }
+
+}
+
+
+@keyframes buttonPulse{
+
+    0%,100%{
 
         box-shadow:
 
-        0 5px 20px
-        rgba(0,190,255,.3);
+        0 0 10px
+        rgba(255,0,128,.65),
+
+        0 0 25px
+        rgba(140,0,255,.45);
 
     }
 
@@ -819,8 +1144,32 @@ h1{
 
         box-shadow:
 
-        0 5px 35px
-        rgba(0,190,255,.8);
+        0 0 20px
+        rgba(255,0,128,.9),
+
+        0 0 45px
+        rgba(140,0,255,.7),
+
+        0 0 65px
+        rgba(255,77,0,.35);
+
+    }
+
+}
+
+
+@keyframes buttonShine{
+
+    0%{
+
+        left:-100%;
+
+    }
+
+    45%,
+    100%{
+
+        left:150%;
 
     }
 
@@ -840,7 +1189,7 @@ h1{
     9px;
 
     color:
-    #71838d;
+    #9c8fa4;
 
     position:relative;
 
@@ -866,12 +1215,12 @@ h1{
     .card{
 
         padding:
-        9px
+        8px
         8px
         15px;
 
         border-radius:
-        21px;
+        22px;
 
     }
 
@@ -893,7 +1242,7 @@ h1{
         30px;
 
         letter-spacing:
-        2px;
+        3px;
 
     }
 
@@ -926,7 +1275,7 @@ h1{
     .vaibhav-box h3{
 
         font-size:
-        11px;
+        10px;
 
     }
 
@@ -959,7 +1308,7 @@ h1{
     .highlight b{
 
         font-size:
-        11px;
+        10px;
 
     }
 
@@ -975,7 +1324,7 @@ h1{
     .telegram-btn{
 
         padding:
-        14px;
+        15px;
 
         font-size:
         15px;
@@ -986,7 +1335,7 @@ h1{
 
 
 /* =========================
-   EXTRA SMALL MOBILE
+   SMALL MOBILE
 ========================= */
 
 @media(max-width:350px){
@@ -1009,14 +1358,6 @@ h1{
 
     }
 
-
-    .vaibhav-box h2{
-
-        font-size:
-        15px;
-
-    }
-
 }
 
 </style>
@@ -1033,33 +1374,49 @@ h1{
 <div class="card">
 
 
+<!-- FLOATING LIGHT EFFECTS -->
+
+<div class="light1"></div>
+
+<div class="light2"></div>
+
+<div class="light3"></div>
+
+
+
 <!-- =========================
-     TOP NEWS TICKER
+     TOP CRICKET NEWS
 ========================= -->
 
 <div class="news-box">
 
 <div class="news-track">
 
+
 <span>
 🏏 BREAKING CRICKET NEWS
 </span>
+
 
 <span>
 🔥 VAIBHAV SOORYAVANSHI IN THE SPOTLIGHT
 </span>
 
+
 <span>
 🇮🇳 INDIA CRICKET LATEST UPDATES
 </span>
+
 
 <span>
 🏆 MATCH NEWS • TEAM NEWS • PLAYING XI
 </span>
 
+
 <span>
 ⚡ CRICKET MATCH UPDATES & HIGHLIGHTS
 </span>
+
 
 </div>
 
@@ -1068,14 +1425,13 @@ h1{
 
 
 <!-- =========================
-     LOGO
+     JEET BHAI LOGO
 ========================= -->
 
 <div class="logo-box">
 
-<img
 
-id="logoPreview"
+<img
 
 src="logo.jpg"
 
@@ -1083,76 +1439,13 @@ alt="JEET BHAI Logo"
 
 >
 
-</div>
-
-
-
-<!-- =========================
-     UPLOAD BUTTONS
-========================= -->
-
-<div class="upload-area">
-
-
-<label
-
-for="logoInput"
-
-class="upload-label"
-
->
-
-📷 Upload Logo
-
-</label>
-
-
-<input
-
-type="file"
-
-id="logoInput"
-
-class="upload-input"
-
-accept="image/*"
-
->
-
-
-
-<label
-
-for="vaibhavInput"
-
-class="upload-label"
-
->
-
-🏏 Upload Background
-
-</label>
-
-
-<input
-
-type="file"
-
-id="vaibhavInput"
-
-class="upload-input"
-
-accept="image/*"
-
->
-
 
 </div>
 
 
 
 <!-- =========================
-     BRAND
+     BRAND NAME
 ========================= -->
 
 <h1>
@@ -1162,6 +1455,7 @@ JEET BHAI
 </h1>
 
 
+
 <div class="subtitle">
 
 🏏 CRICKET NEWS & MATCH UPDATES 🏏
@@ -1169,12 +1463,13 @@ JEET BHAI
 </div>
 
 
+
 <div class="line"></div>
 
 
 
 <!-- =========================
-     VAIBHAV SECTION
+     VAIBHAV CONTENT
 ========================= -->
 
 <div class="vaibhav-box">
@@ -1201,7 +1496,9 @@ match updates, team information and exciting
 stories surrounding young Indian cricket star
 
 <b>
+
 Vaibhav Sooryavanshi
+
 </b>
 
 and the world of cricket.
@@ -1237,6 +1534,7 @@ Latest Updates
 </div>
 
 
+
 <div class="highlight">
 
 <b>
@@ -1252,6 +1550,7 @@ Cricket News
 </span>
 
 </div>
+
 
 
 <div class="highlight">
@@ -1280,6 +1579,7 @@ Team Updates
 ========================= -->
 
 <div class="news-box">
+
 
 <div class="news-track">
 
@@ -1313,6 +1613,7 @@ Team Updates
 
 
 </div>
+
 
 </div>
 
@@ -1354,130 +1655,6 @@ rel="noopener"
 </div>
 
 </div>
-
-
-
-<script>
-
-/* =========================
-   LOGO UPLOAD
-========================= */
-
-const logoInput =
-document.getElementById(
-    "logoInput"
-);
-
-const logoPreview =
-document.getElementById(
-    "logoPreview"
-);
-
-
-logoInput.addEventListener(
-
-    "change",
-
-    function(event){
-
-        const file =
-        event.target.files[0];
-
-        if(file){
-
-            const reader =
-            new FileReader();
-
-
-            reader.onload =
-            function(e){
-
-                logoPreview.src =
-                e.target.result;
-
-            };
-
-
-            reader.readAsDataURL(file);
-
-        }
-
-    }
-
-);
-
-
-
-/* =========================
-   VAIBHAV BACKGROUND UPLOAD
-========================= */
-
-const vaibhavInput =
-document.getElementById(
-    "vaibhavInput"
-);
-
-
-vaibhavInput.addEventListener(
-
-    "change",
-
-    function(event){
-
-        const file =
-        event.target.files[0];
-
-
-        if(file){
-
-            const imageURL =
-            URL.createObjectURL(file);
-
-
-            const style =
-            document.createElement(
-                "style"
-            );
-
-
-            style.innerHTML = `
-
-            .card::before{
-
-                background:
-
-                linear-gradient(
-
-                    rgba(2,8,16,.55),
-
-                    rgba(2,8,16,.86)
-
-                ),
-
-                url("${imageURL}")
-
-                center top /
-
-                cover
-
-                no-repeat;
-
-            }
-
-            `;
-
-
-            document.head.appendChild(
-                style
-            );
-
-        }
-
-    }
-
-);
-
-</script>
 
 
 </body>
